@@ -581,8 +581,8 @@ li {
         column-gap: 10px;
     }
 
-    .filters-bar ul li {
-        flex: 1 0 0;
+    .filters-bar li {
+        flex: 1 0 40%;
         display: flex;
     }
 
@@ -667,4 +667,14 @@ li {
         margin-bottom: 60px;
     }
     
+}
+
+/* Small devices fillters  */
+@media (max-width: 334px) {
+    /****** Info group ***********/
+
+    .filters-bar button{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
