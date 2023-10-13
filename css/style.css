@@ -276,7 +276,7 @@ li {
     justify-content: space-between;
 }
 
-.hebergements-and-populaires section {
+.hebergements, .populaires {
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
@@ -601,14 +601,14 @@ li {
     .hebergements-and-populaires {
         flex-direction: column-reverse;
     }
-    .hebergements-and-populaires section {
+    .hebergements, .populaires {
         border-radius: 0px;
         padding-left: 20px;
         padding-right: 20px;
     }
 
     /****** Hebergements ***********/
-    .hebergements-and-populaires section.hebergements {
+    .hebergements {
         background-color: white;
     }
 
