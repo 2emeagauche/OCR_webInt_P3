@@ -522,6 +522,7 @@ li {
         align-items: baseline;
         justify-content: center;
         width: 50%;
+        border-bottom: 2px solid var(--main-bg-color);
     }
 
     .nav-principale a:hover {
