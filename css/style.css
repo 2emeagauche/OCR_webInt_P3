@@ -124,7 +124,7 @@ li {
 /****** Info group ***********/
 .info-group h1 {
     font-size: 22px;
-    margin: 0 0 0.3em;
+    margin: 0 0 8px;
 }
 
 .info-group h2 {
@@ -138,7 +138,7 @@ li {
 }
 
 .headline {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 
 .search-bar {
@@ -239,7 +239,7 @@ li {
 }
 
 .info-bar {
-    margin: 40px 0;
+    margin: 35px 0;
 }
 
 .info-bar p {
