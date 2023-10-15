@@ -154,7 +154,7 @@ li {
     border-radius: 15px;
 }
 
-.fa-location-dot {
+.fa-location-dot { /* icone pinpoint decorative à gauche du champ texte */
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -169,7 +169,7 @@ li {
     font-size: 1.15em;
 }
 
-.input-class {
+.input-class { /* input type text */
     display: inline-block;
     box-sizing: border-box;
     height: 50px;
@@ -180,7 +180,7 @@ li {
     text-align: center;
 }
 
-.submit-box {
+.submit-box { /* bloc contenant l'input submit et l'icone loupe pour mobile */
     display: inline-flex;
     box-sizing: border-box;
     height: 50px;
@@ -200,7 +200,7 @@ li {
     cursor: pointer;
 }
 
-.fa-search {
+.fa-search { /* icone loupe désactivée en desktop */
     display: none;
 }
 
@@ -249,7 +249,7 @@ li {
     column-gap: 10px;
 }
 
-.info-bar .info-box {
+.info-bar .info-box { /* icone "i" dans un cercle */
     display: inline-block;
     box-sizing: border-box;
     width: 25px;
@@ -259,16 +259,13 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 0 0 25px;
+    flex: 0 0 25px; /* ne doit ni grandir ni retrecir et mesurer 25px */
 }
 
 .info-bar .fa-solid {
     font-size: 12px;
 }
 
-.info-bar p > * {
-    flex: 1 0 auto;
-}
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
@@ -299,12 +296,12 @@ li {
 }
 
 .hebergements-cards a {
-    flex: 1 1 28%;
+    flex: 1 1 28%; /* permet une largeur identique à toutes les cards et 3 par rangées. Le pourcentage est empirique */
     display: flex;
 }
 
 .hebergements-cards .card {
-    flex: 1 1 auto;
+    flex: 1 1 auto; /* permet de remplir le conteneur en largeur */
 }
 .hebergements-cards .card img {
     width: 100%;
@@ -312,7 +309,7 @@ li {
     border-radius: 15px 15px 0px 0px;
 }
 
-.hebergements-cards .card-content {
+.hebergements-cards .card-content { /* zone des textes et du rating */
     padding-left: 10px;
     box-sizing: border-box;
 }
@@ -330,7 +327,7 @@ li {
     margin-bottom: 10px;
 }
 
-.display-more{
+.display-more{ /* texte "Afficher plus" */
     font-size: 16px;
     font-weight: 700;
     margin-top: 30px;
@@ -398,13 +395,13 @@ li {
 }
 
 .activites-cards a {
-    flex: 1 1 0;
+    flex: 1 1 0; /* permet une largeur identique à toutes les cards et 3 par rangées. */
     display: flex;
 }
 
 .activites-cards .card {
     padding: 0;
-    flex: 1 0 0;
+    flex: 1 1 0; /* permet de remplir le conteneur en largeur */
 }
 
 .activites-cards .card img {
@@ -429,10 +426,11 @@ li {
     padding: 30px;
     background-color: var(--main-bg-color);
     display: flex;
+    column-gap: 20px;
 }
 
 .nav-secondaire .nav-section {
-    flex: 1 0 0;
+    flex: 1 1 0;
 }
 
 .nav-secondaire h2 {
@@ -450,7 +448,7 @@ li {
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
     /****** Info group ***********/
-    .filters-bar {
+    .filters-bar { /* les filtres ne sont plus à côté du titre en tablets */
         display: block;
     }
 
@@ -459,7 +457,7 @@ li {
     }
 
     /****** Hebergements And Populaires ***********/
-    .hebergements-and-populaires {
+    .hebergements-and-populaires { /* alignement vertical des blocs Hebergements et Populaires */
         flex-direction: column;
     }
 
@@ -509,7 +507,7 @@ li {
     }
 
     /****** Header ***********/
-    .page-header {
+    .page-header { /* modifie l'arangement du logo et du menu en mobile */
         flex-direction: column;
         align-items: center;
         justify-content: normal;
@@ -529,9 +527,9 @@ li {
         border-bottom: 2px solid var(--main-bg-color);
     }
 
-    .nav-principale a:hover {
+    .nav-principale a:hover { /* le soulignement change du haut vers le bas */
         border-top: 0px;
-        border-bottom: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color); 
     }
 
     /****** Info group ***********/
@@ -545,10 +543,10 @@ li {
     }
 
     .input-class {
-        width: calc(100% - 50px);
+        width: calc(100% - 50px); /* largeur input text 100% du parent moins la largeur du submit */
     }
 
-    .submit-box{
+    .submit-box{ /* conteneur du submit doit être designé car le submit doit être invisible (mais présent) */
         justify-content: center;
         align-items: center;
         border-radius: 15px;
@@ -561,14 +559,14 @@ li {
         right: 0px;
     }
 
-    .fa-search {
+    .fa-search { /* la loupe est rendue visible en mobile. le positionnement avec le zindex permet au submit invisible d'être par dessus (et donc réactif)  */
         position: relative;
         z-index: 0;
         display: block;
         color: white;
     }
     
-    .submit-class {
+    .submit-class { /* le submit et son texte sont rendus invisible mais toujours présent et actif */
         border-radius: 0px;
         background-color: transparent;
         font-size: 0px;
@@ -586,7 +584,7 @@ li {
         column-gap: 10px;
     }
 
-    .filters-bar li {
+    .filters-bar li { /* 2 rangées de 2 */
         flex: 1 0 40%;
         display: flex;
     }
@@ -598,7 +596,7 @@ li {
     
     /****** Hebergements And Populaires ***********/
 
-    .hebergements-and-populaires {
+    .hebergements-and-populaires { /* inverse l'ordre vertical des blocs */
         flex-direction: column-reverse;
     }
     .hebergements, .populaires {
@@ -617,7 +615,7 @@ li {
     }
 
     .hebergements-cards {
-        display: block;
+        display: block; /* plus besoin du comportement flex */
     }
     
     .hebergements-cards > a {
@@ -674,7 +672,7 @@ li {
     
 }
 
-/* Small devices fillters  */
+/* Small devices fillters: ajout pour régler l'affichage des filtres sous cette largeur  */
 @media (max-width: 334px) {
     /****** Info group ***********/
 
